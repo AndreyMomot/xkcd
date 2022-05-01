@@ -10,16 +10,18 @@ import UIKit
 final class HomeCoordinator: BaseCoordinator {
     private let presenter: UINavigationController
     private let api: API
+    private let storage: Storable
     private var homeViewController: HomeViewController?
     private var detailsCoordinator: DetailsCoordinator?
     
-    init(presenter: UINavigationController, api: API) {
+    init(presenter: UINavigationController, api: API, storage: Storable) {
       self.presenter = presenter
       self.api = api
+        self.storage = storage
     }
     
     override func start() {
-        let viewModel = HomeViewModel(with: api)
+        let viewModel = HomeViewModel(with: api, storage: storage)
         let homeViewController = instantiate(HomeViewController.self)
         homeViewController.viewModel = viewModel
         homeViewController.onShowDetails = {[weak self] comics in

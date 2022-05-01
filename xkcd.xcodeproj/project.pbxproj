@@ -35,6 +35,8 @@
 		479F2A33281EF73E009DCE91 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2A32281EF73E009DCE91 /* DetailsViewModel.swift */; };
 		479F2A35281EF747009DCE91 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2A34281EF747009DCE91 /* DetailsViewController.swift */; };
 		479F2A37281EF751009DCE91 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F2A36281EF751009DCE91 /* DetailsViewController.xib */; };
+		479F2A3A281EFE78009DCE91 /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2A39281EFE78009DCE91 /* Storable.swift */; };
+		479F2A3C281EFE81009DCE91 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2A3B281EFE81009DCE91 /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		479F2A32281EF73E009DCE91 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		479F2A34281EF747009DCE91 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		479F2A36281EF751009DCE91 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		479F2A39281EFE78009DCE91 /* Storable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		479F2A3B281EFE81009DCE91 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		479F29D0281ED2BA009DCE91 /* xkcd */ = {
 			isa = PBXGroup;
 			children = (
+				479F2A38281EFE6A009DCE91 /* Storage */,
 				479F2A21281EDAFA009DCE91 /* Modules */,
 				479F2A20281EDAF4009DCE91 /* Models */,
 				479F2A18281EDAAE009DCE91 /* API */,
@@ -262,6 +267,15 @@
 				479F2A36281EF751009DCE91 /* DetailsViewController.xib */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		479F2A38281EFE6A009DCE91 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				479F2A39281EFE78009DCE91 /* Storable.swift */,
+				479F2A3B281EFE81009DCE91 /* Storage.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +413,7 @@
 				479F2A2C281EE887009DCE91 /* SearchRequest.swift in Sources */,
 				479F2A1B281EDAC2009DCE91 /* API.swift in Sources */,
 				479F2A17281EDAA2009DCE91 /* UIView.swift in Sources */,
+				479F2A3A281EFE78009DCE91 /* Storable.swift in Sources */,
 				479F2A0B281ED8CB009DCE91 /* Bindable.swift in Sources */,
 				479F2A1F281EDAD0009DCE91 /* AppAPI.swift in Sources */,
 				479F2A07281ED83A009DCE91 /* Coordinator.swift in Sources */,
@@ -410,6 +425,7 @@
 				479F2A35281EF747009DCE91 /* DetailsViewController.swift in Sources */,
 				479F2A15281EDA92009DCE91 /* BaseViewController.swift in Sources */,
 				479F2A0D281ED8D8009DCE91 /* ErrorHelper.swift in Sources */,
+				479F2A3C281EFE81009DCE91 /* Storage.swift in Sources */,
 				479F2A24281EDB5D009DCE91 /* HomeCoordinator.swift in Sources */,
 				479F2A28281EDBB9009DCE91 /* HomeViewController.swift in Sources */,
 				479F2A0F281ED8F5009DCE91 /* ImageCache.swift in Sources */,
