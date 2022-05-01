@@ -1,2 +1,3 @@
 # xkcd
-Comics app
+
+Description of Comics app
