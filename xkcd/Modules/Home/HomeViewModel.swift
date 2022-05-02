@@ -66,14 +66,16 @@ final class HomeViewModel: HomeViewModelProtocol {
             id = random
         }
         
-        storedComicses.value?.forEach({ storedComics in
+        storedComicses.value?.forEach { storedComics in
             if storedComics.id == id {
                 var stored = storedComics
                 stored.isStored = true
                 comics.value = stored
                 return
             }
-        })
+        }
+        
+        guard comics.value?.id != id else { return }
         
         let request = SearchRequest(id: id)
         api.send(request) {[weak self] result  in

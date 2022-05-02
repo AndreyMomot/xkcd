@@ -25,9 +25,7 @@ final class HomeCoordinator: BaseCoordinator {
         let homeViewController = instantiate(HomeViewController.self)
         homeViewController.viewModel = viewModel
         homeViewController.onShowDetails = {[weak self] comics in
-            DispatchQueue.main.async {
-                self?.showDetails(with: comics)
-            }
+            self?.showDetails(with: comics)
         }
         
         presenter.pushViewController(homeViewController, animated: true)
