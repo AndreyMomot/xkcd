@@ -15,6 +15,7 @@
                 <outlet property="nextButton" destination="rJy-pA-Wl9" id="Sbd-f8-EJQ"/>
                 <outlet property="previousButton" destination="gPR-pZ-R0d" id="npL-O9-Va5"/>
                 <outlet property="randomButton" destination="BSR-5F-GvN" id="mNK-pg-VxT"/>
+                <outlet property="storeButton" destination="auC-rP-JDs" id="4W2-2l-gSi"/>
                 <outlet property="titleLabel" destination="Bxb-Rf-jGN" id="meT-Pl-xhZ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="BiX-PQ-GMV"/>
             </connections>
@@ -73,8 +74,8 @@
                         <constraint firstItem="BSR-5F-GvN" firstAttribute="width" secondItem="gPR-pZ-R0d" secondAttribute="width" id="rHM-kK-1sz"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxb-Rf-jGN">
-                    <rect key="frame" x="8" y="132" width="398" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxb-Rf-jGN">
+                    <rect key="frame" x="56" y="133.5" width="302" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Hsy-c8-y3s"/>
                     </constraints>
@@ -83,21 +84,35 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-CH-dId" customClass="LoadableImageView" customModule="xkcd" customModuleProvider="target">
-                    <rect key="frame" x="8" y="177" width="398" height="677"/>
+                    <rect key="frame" x="8" y="180" width="398" height="674"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auC-rP-JDs">
+                    <rect key="frame" x="358" y="124" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="5mj-Sx-yqY"/>
+                        <constraint firstAttribute="width" secondItem="auC-rP-JDs" secondAttribute="height" multiplier="1:1" id="ng4-mG-dnq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="storeButtonAction:" destination="-1" eventType="touchUpInside" id="pIO-bF-vFm"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="dSD-CH-dId" firstAttribute="top" secondItem="auC-rP-JDs" secondAttribute="bottom" constant="16" id="1uT-Fh-5Uk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dSD-CH-dId" secondAttribute="bottom" constant="8" id="2Kl-ku-8VV"/>
-                <constraint firstItem="Bxb-Rf-jGN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Fhn-cB-4oJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="auC-rP-JDs" secondAttribute="trailing" constant="16" id="9fx-Xs-wm0"/>
+                <constraint firstItem="Bxb-Rf-jGN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="56" id="Fhn-cB-4oJ"/>
+                <constraint firstItem="auC-rP-JDs" firstAttribute="leading" secondItem="Bxb-Rf-jGN" secondAttribute="trailing" id="Let-EF-vbK"/>
                 <constraint firstItem="dSD-CH-dId" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Xzl-ZL-X8w"/>
                 <constraint firstItem="dSD-CH-dId" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-8" id="b07-dh-cJv"/>
+                <constraint firstItem="Bxb-Rf-jGN" firstAttribute="centerY" secondItem="auC-rP-JDs" secondAttribute="centerY" id="bd4-pE-oS4"/>
                 <constraint firstItem="pcL-45-06u" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="g7a-bY-d6K"/>
-                <constraint firstItem="dSD-CH-dId" firstAttribute="top" secondItem="Bxb-Rf-jGN" secondAttribute="bottom" constant="24" id="je8-vb-22B"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Bxb-Rf-jGN" secondAttribute="trailing" constant="8" id="kS2-Jf-DGu"/>
+                <constraint firstItem="auC-rP-JDs" firstAttribute="top" secondItem="pcL-45-06u" secondAttribute="bottom" constant="16" id="l0d-Al-5qZ"/>
                 <constraint firstItem="pcL-45-06u" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mm2-w1-M0U"/>
-                <constraint firstItem="Bxb-Rf-jGN" firstAttribute="top" secondItem="pcL-45-06u" secondAttribute="bottom" constant="24" id="rz3-R8-xa2"/>
             </constraints>
             <point key="canvasLocation" x="134.78260869565219" y="101.78571428571428"/>
         </view>

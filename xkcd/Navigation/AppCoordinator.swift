@@ -9,6 +9,7 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
     let api: API
+    let storage: Storable
     private let window: UIWindow
     private let rootViewController: UINavigationController
     private let homeCoordinator: HomeCoordinator
@@ -17,9 +18,10 @@ final class AppCoordinator: Coordinator {
     init(window: UIWindow) {
         self.window = window
         api = AppAPI()
+        storage = Storage()
         rootViewController = UINavigationController()
         
-        homeCoordinator = HomeCoordinator(presenter: rootViewController, api: api)
+        homeCoordinator = HomeCoordinator(presenter: rootViewController, api: api, storage: storage)
     }
     
     func start() {

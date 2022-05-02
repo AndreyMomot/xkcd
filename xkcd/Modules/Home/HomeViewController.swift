@@ -14,6 +14,7 @@ final class HomeViewController: BaseViewController {
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var imageView: LoadableImageView!
+    @IBOutlet private weak var storeButton: UIButton!
     
     var viewModel: HomeViewModelProtocol?
     var onShowDetails: ((Comics) -> Void)?
@@ -23,6 +24,7 @@ final class HomeViewController: BaseViewController {
         
         setupView()
         binding()
+        viewModel?.getStoredComics()
         viewModel?.search(for: .random)
     }
     
@@ -34,6 +36,9 @@ final class HomeViewController: BaseViewController {
         previousButton.setTitle("Previous", for: .normal)
         randomButton.setTitle("Random", for: .normal)
         nextButton.setTitle("Next", for: .normal)
+        
+        storeButton.setTitle("", for: .normal)
+        storeButton.tintColor = .red
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         imageView.isUserInteractionEnabled = true
@@ -64,6 +69,11 @@ final class HomeViewController: BaseViewController {
         if let imageUrl = comics.image {
             imageView.loadImageWithUrl(urlString: imageUrl)
         }
+        
+        let storedImage = UIImage(named: "like")?.withRenderingMode(.alwaysTemplate)
+        let unstoredImage = UIImage(named: "unlike")?.withRenderingMode(.alwaysTemplate)
+        let image = comics.isStored ? unstoredImage : storedImage
+        storeButton.setImage(image, for: .normal)
     }
 
     @objc private func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -84,5 +94,9 @@ final class HomeViewController: BaseViewController {
     
     @IBAction private func nextButtonAction(_ sender: Any) {
         viewModel?.search(for: .next)
+    }
+    
+    @IBAction private func storeButtonAction(_ sender: Any) {
+        viewModel?.storeComics()
     }
 }
