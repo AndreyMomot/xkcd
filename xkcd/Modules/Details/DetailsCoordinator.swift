@@ -11,7 +11,7 @@ final class DetailsCoordinator: BaseCoordinator {
     private let presenter: UINavigationController
     private let comics: Comics
     private var detailsViewController: DetailsViewController?
-    
+
     init(presenter: UINavigationController, comics: Comics) {
       self.presenter = presenter
       self.comics = comics
