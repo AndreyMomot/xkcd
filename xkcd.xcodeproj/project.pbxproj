@@ -131,6 +131,15 @@
 			path = APITests;
 			sourceTree = "<group>";
 		};
+		476251AC281FD3F5001D7ED5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				479F29DA281ED2BE009DCE91 /* Assets.xcassets */,
+				479F29DC281ED2BE009DCE91 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		479F29C5281ED2BA009DCE91 = {
 			isa = PBXGroup;
 			children = (
@@ -154,17 +163,16 @@
 		479F29D0281ED2BA009DCE91 /* xkcd */ = {
 			isa = PBXGroup;
 			children = (
-				479F2A38281EFE6A009DCE91 /* Storage */,
-				479F2A21281EDAFA009DCE91 /* Modules */,
-				479F2A20281EDAF4009DCE91 /* Models */,
+				479F29D1281ED2BA009DCE91 /* AppDelegate.swift */,
 				479F2A18281EDAAE009DCE91 /* API */,
 				479F2A13281EDA83009DCE91 /* Extensions */,
-				479F2A10281EDA1E009DCE91 /* Views */,
 				479F2A09281ED8B8009DCE91 /* Helpers */,
+				479F2A20281EDAF4009DCE91 /* Models */,
+				479F2A21281EDAFA009DCE91 /* Modules */,
 				479F2A01281ED80B009DCE91 /* Navigation */,
-				479F29D1281ED2BA009DCE91 /* AppDelegate.swift */,
-				479F29DA281ED2BE009DCE91 /* Assets.xcassets */,
-				479F29DC281ED2BE009DCE91 /* LaunchScreen.storyboard */,
+				476251AC281FD3F5001D7ED5 /* Resources */,
+				479F2A38281EFE6A009DCE91 /* Storage */,
+				479F2A10281EDA1E009DCE91 /* Views */,
 				479F29DF281ED2BE009DCE91 /* Info.plist */,
 			);
 			path = xkcd;
@@ -265,9 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				479F2A23281EDB5D009DCE91 /* HomeCoordinator.swift */,
-				479F2A25281EDB82009DCE91 /* HomeViewModel.swift */,
 				479F2A27281EDBB9009DCE91 /* HomeViewController.swift */,
 				479F2A29281EE84F009DCE91 /* HomeViewController.xib */,
+				479F2A25281EDB82009DCE91 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -276,9 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				479F2A30281EF736009DCE91 /* DetailsCoordinator.swift */,
-				479F2A32281EF73E009DCE91 /* DetailsViewModel.swift */,
 				479F2A34281EF747009DCE91 /* DetailsViewController.swift */,
 				479F2A36281EF751009DCE91 /* DetailsViewController.xib */,
+				479F2A32281EF73E009DCE91 /* DetailsViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
