@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		476251A9281FD11D001D7ED5 /* comics.json in Resources */ = {isa = PBXBuildFile; fileRef = 476251A8281FD11D001D7ED5 /* comics.json */; };
+		476251AB281FD129001D7ED5 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476251AA281FD129001D7ED5 /* APITests.swift */; };
 		479F29D2281ED2BA009DCE91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F29D1281ED2BA009DCE91 /* AppDelegate.swift */; };
 		479F29DB281ED2BE009DCE91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479F29DA281ED2BE009DCE91 /* Assets.xcassets */; };
 		479F29DE281ED2BE009DCE91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479F29DC281ED2BE009DCE91 /* LaunchScreen.storyboard */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		476251A8281FD11D001D7ED5 /* comics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = comics.json; sourceTree = "<group>"; };
+		476251AA281FD129001D7ED5 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		479F29CE281ED2BA009DCE91 /* xkcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xkcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479F29D1281ED2BA009DCE91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479F29DA281ED2BE009DCE91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		476251A7281FD0D0001D7ED5 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				476251A8281FD11D001D7ED5 /* comics.json */,
+				476251AA281FD129001D7ED5 /* APITests.swift */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
 		479F29C5281ED2BA009DCE91 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		479F29E7281ED2BE009DCE91 /* xkcdTests */ = {
 			isa = PBXGroup;
 			children = (
+				476251A7281FD0D0001D7ED5 /* APITests */,
 				479F29E8281ED2BE009DCE91 /* xkcdTests.swift */,
 			);
 			path = xkcdTests;
@@ -393,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476251A9281FD11D001D7ED5 /* comics.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476251AB281FD129001D7ED5 /* APITests.swift in Sources */,
 				479F29E9281ED2BE009DCE91 /* xkcdTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
